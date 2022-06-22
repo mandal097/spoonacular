@@ -1,0 +1,98 @@
+.recipe_steps {
+  width: 100%;
+  height: auto;
+  margin: 8rem 0;
+  .recipe_steps_wrapper {
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    .recipe_steps_header {
+      width: 100%;
+      height: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      .header_steps {
+        font-size: 4.5rem;
+        color: #333;
+        font-weight: bolder;
+      }
+      .right_steps {
+        height: 6rem;
+        width: auto;
+        background: #f6f8fb;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        font-size: 2.3rem;
+        padding: 0 5rem;
+        .time_required {
+          width: 2rem;
+          height: 2rem;
+          background-image: url("../../../public/images/clock.svg");
+          background-size: 1.5rem;
+          background-repeat: no-repeat;
+          background-position: 0%;
+          margin-left: 3rem;
+          margin-right: 1rem;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0.1rem;
+            height: 100%;
+            left: -1.3rem;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+    .steps_content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .step {
+        width: 100%;
+        span {
+          font-size: 3rem;
+          font-weight: bold;
+          text-transform: capitalize;
+          color: #333;
+        }
+      }
+      .steps_details {
+        width: 100%;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      .steps_img {
+        width: 100%;
+        height: auto;
+        padding: 10rem 0;
+        border-radius: 2rem;
+        margin-top: 3rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        img{
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .recipe_steps {
+    width: 100%;
+    height: auto;
+    .recipe_steps_wrapper {
+      width: 95%;
+    }
+  }
+}

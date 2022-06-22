@@ -1,0 +1,143 @@
+.keto_recipe {
+  width: 100%;
+  height: auto;
+  margin: 5rem 0;
+  .keto_recipe_wrapper {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .keto_recipe_head {
+      width: 100%;
+      height: 10%;
+      h2 {
+        font-size: 5rem;
+        text-align: center;
+        color: var(--greenish-col);
+      }
+    }
+    .keto_recipe_cards_container {
+      width: 90%;
+      height: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .keto_recipe_cards {
+        flex: 1 1 520px;
+        min-width: 520px;
+        max-width: 520px;
+        height: 20rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        cursor: pointer;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        &:hover {
+            .img_div{
+                transform: scale(1);
+            }
+            .text{
+                h2{
+                    span{
+                        color: var(--greenish-col);
+                    }
+                }
+            }
+        }
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+        );
+        .text {
+          width: auto;
+          height: auto;
+          margin: 2rem;
+          h2 {
+            font-size: 3.3rem;
+            color: white;
+            font-weight: 100;
+            line-height: 3.6rem;
+            span {
+              font-size: 4rem;
+              color: white;
+              font-weight: 600;
+              transition: al 100ms ease-in-out;
+            }
+          }
+        }
+        .img_div {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          transform: scale(1.05);
+          transition: transform 150ms ease-in-out;
+        }
+        .keto_recipe_cards_1 {
+          background-image: url("../../../public/images/ketorecipe_1.avif");
+        }
+        .keto_recipe_cards_2 {
+          background-image: url("../../../public/images/ketorecipe_2.avif");
+        }
+        .keto_recipe_cards_3 {
+          background-image: url("../../../public/images/ketorecipe_3.avif");
+        }
+        .keto_recipe_cards_4 {
+          background-image: url("../../../public/images/ketorecipe_4.avif");
+        }
+      }
+    }
+    .keto_recipe_button {
+      width: 100%;
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+      button {
+        width: 23rem;
+        height: 5.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: var(--greenish-col);
+        border: none;
+        border-radius: 50rem;
+        font-size: 1.6rem;
+        font-weight: bolder;
+        cursor: pointer;
+        transition: all 200ms linear;
+        &:hover {
+          background-color: var(--dark-greenish-col);
+          transform: translateY(0.5rem);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .keto_recipe {
+    height: auto;
+    .keto_recipe_wrapper {
+      width: 95%;
+      height: auto;
+      .keto_recipe_cards_container{
+        height: auto;
+      }
+    }
+  }
+}

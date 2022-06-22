@@ -1,0 +1,102 @@
+.carb_manager_by_number {
+  width: 100%;
+  height: 85vh;
+  margin-top: 7rem;
+  .carb_manager_by_number_wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .carb_manager_by_number_top {
+      width: 50%;
+      height: auto;
+      .carb_manager_by_number_top_head {
+        font-size: 4rem;
+        text-align: center;
+        font-weight: bolder;
+      }
+      .carb_manager_by_number_top_para {
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        letter-spacing: 0.1px;
+      }
+    }
+    .carb_manager_by_number_cards_container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .carb_manager_by_number_cards_container_cards {
+        flex: 1 1 280px;
+        min-width: 280px;
+        max-width: 280px;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin: 1rem;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 2rem;
+        transition: all 300ms linear;
+        &:hover{
+          transform: translateY(-0.5rem);
+          box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
+        }
+        .carb_manager_by_number_cards_container_icons {
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          margin: 1rem 0;
+        }
+        .icons_1 {
+          background-image: url("../../../public/images/chicken.svg");
+        }
+        .icons_2 {
+          background-image: url("../../../public/images/customer.svg");
+        }
+        .icons_3 {
+          background-image: url("../../../public/images/star.svg");
+        }
+        .icons_4 {
+          background-image: url("../../../public/images/greenchefhat.svg");
+        }
+        .carb_manager_by_number_cards_container_number {
+          font-size: 5rem;
+          font-weight: bolder;
+          color: rgba(0, 0, 0, 0.8);
+        }
+        .carb_manager_by_number_cards_container_para {
+          font-size: 1.6rem;
+          text-align: center;
+          color: #333;
+          font-weight: bold;
+          font-weight: 400;
+          p {
+            span {
+              color: black;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .carb_manager_by_number {
+    height: auto;
+    .carb_manager_by_number_wrapper {
+      width: 95%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.premium_banner {
+  width: 100%;
+  height: 65vh;
+  margin: 5rem 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: radial-gradient(
+    ellipse at center,
+    var(--greenish-col) 0,
+    var(--dark-greenish-col) 100%
+  );
+  overflow: hidden;
+  position: relative;
+  &::after {
+    position: absolute;
+    left: -316px;
+    top: -32px;
+    z-index: 0;
+    content: "";
+    width: 1026px;
+    height: 758px;
+    background: url("../../../public/images/curvywaves.svg") no-repeat;
+    background-size: contain;
+    background-position: 100%;
+    transform: rotateX(-180deg) translateX(50rem);
+  }
+  .premium_banner_content {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 4.5rem;
+      font-weight: bolder;
+      text-align: center;
+      line-height: 3rem;
+    }
+    p {
+      font-size: 1.7rem;
+      font-weight: 400;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .button {
+      width: 25rem;
+      height: 5rem;
+      border-radius: 5rem;
+      border: none;
+      background-color: rgb(245, 43, 43);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 200ms linear;
+      cursor: pointer;
+      &:hover {
+        background-color: red;
+        transform: translateY(0.5rem);
+      }
+      .left_btn_icon {
+        width: 2rem;
+        height: 2rem;
+        background-image: url("../../../public/images/trophy.svg");
+        margin-right: 1rem;
+      }
+      .text {
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .premium_banner {
+    height: 80vh;
+    .premium_banner_content {
+      width: 95%;
+      h2 {
+        font-size: 2.5rem;
+        line-height: 5rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

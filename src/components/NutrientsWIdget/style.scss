@@ -1,0 +1,106 @@
+.recipe_details_left_bottom {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  padding: 2rem 1rem;
+  .recipe_details_left_bottom_ {
+    width:80%;
+    .recipe_details_left_bottom_nutrients {
+      width: 100%;
+      height: auto;
+      display: flex;
+      border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
+      padding: 0.5rem;
+      .recipe_details_left_bottom_left {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        span {
+          font-size: 1.7rem;
+          font-weight: 400;
+          color: #6f737a;
+          margin-top: 1rem;
+        }
+        .nutrient_type {
+          color: black;
+          font-weight: bolder;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 50%;
+            left: -1.5rem;
+            top: 0.8rem;
+          }
+        }
+        .nutrient_type_carb {
+          &::before {
+            background-color: red;
+          }
+        }
+        .nutrient_type_protein {
+          &::before {
+            background-color: blue;
+          }
+        }
+        .nutrient_type_fats {
+          &::before {
+            background-color: goldenrod;
+          }
+        }
+      }
+      .recipe_details_left_bottom_right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        span {
+          font-size: 1.7rem;
+          font-weight: 400;
+          color: #6f737a;
+          margin-top: 1rem;
+        }
+        .net_nutrient_type {
+          color: black;
+          font-weight: bolder;
+        }
+      }
+    }
+    .showWidgets {
+      border: none;
+      margin-top: 3rem;
+      background-color: var(--greenish-col);
+      color: white;
+      height: 3rem;
+      width: 12rem;
+      border-radius: 1rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      transition: all 200ms linear;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(90, 135, 153);
+        transform: translateY(0.2rem);
+      }
+    }
+  }
+  .chart {
+    width: 40%;
+    height: 100%;
+    border: 1px solid red;
+  }
+}
+
+@media (max-width:1200px) {
+  .recipe_details_left_bottom{
+    width: 95%;
+  }
+}

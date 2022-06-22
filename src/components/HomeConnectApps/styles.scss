@@ -1,0 +1,107 @@
+.apps_and_devices {
+  width: 100%;
+  height: auto;
+  margin-top: 8rem;
+  .apps_and_devices_wrapper {
+    width: 1100px;
+    height: 85vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .content_box {
+      width: 50%;
+      height: auto;
+      .apps_header {
+        font-size: 5rem;
+        font-weight: bolder;
+        text-align: center;
+        color: rgb(31, 2, 23);
+      }
+      .para {
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("../../../public/images/curves.svg");
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      top: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../../public/images/curves.svg");
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: 0%;
+      top: 0;
+      right: 0;
+      transform: rotateY(180deg);
+    }
+    .icons_ {
+      position: absolute;
+      height: 10rem;
+      width: 10rem;
+      background-color: white;
+      box-shadow: 1px 1px 20px rgb(180, 167, 167);
+      border-radius: 50%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+    .icons_1 {
+      top: 5rem;
+      left: 10rem;
+      background-image: url("../../../public/images/fitbit.avif");
+    }
+    .icons_2 {
+      top: 5rem;
+      right: 10rem;
+      background-image: url("../../../public/images/heart.avif");
+    }
+    .icons_3 {
+      bottom: 5rem;
+      left: 10rem;
+      background-image: url("../../../public/images/stackheart.avif");
+    }
+    .icons_4 {
+      bottom: 5rem;
+      right: 10rem;
+      background-image: url("../../../public/images/garmin.svg");
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .apps_and_devices {
+    .apps_and_devices_wrapper {
+      width: 90%;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .apps_and_devices {
+    .apps_and_devices_wrapper {
+        width: 96%;
+      .content_box{
+          .apps_header{
+              font-size: 3rem;
+          }
+          .para{
+              font-size: 1.2rem;
+          }
+      }
+    }
+  }
+}

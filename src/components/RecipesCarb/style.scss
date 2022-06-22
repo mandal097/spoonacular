@@ -1,0 +1,47 @@
+.carb_recipes {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 6rem 0;
+  .carb_recipes_wrapper {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .carb_recipes_header {
+      width: 100%;
+      height: auto;
+      h2 {
+        font-size: 4.5rem;
+        text-align: center;
+        line-height: 5rem;
+        color: #333;
+      }
+      p {
+        font-size: 1.8rem;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 400;
+      }
+    }
+    .carb_recipes_recipes_wrapper {
+      width: 100%;
+      height: auto;
+      margin-top: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .carb_recipes {
+    .carb_recipes_wrapper {
+      width: 95%;
+    }
+  }
+}

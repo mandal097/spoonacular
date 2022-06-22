@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Baloo+2:wght@400;500;600&family=Inconsolata:wght@200;300;500;600;700;800;900&family=Londrina+Outline&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Tourney:wght@100&display=swap');
+
+:root {
+    --greenish-col: #2dd29a;
+    --dark-greenish-col: #1ca677;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+body,
+html {
+    font-size: 62.5%;
+}
+
+@keyframes header {
+    0% {
+        transform: translateY(-40rem) scale(1.1);
+        height: 1rem;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes widgets {
+    0% {
+        clip-path: circle(1% at 20% 95%);
+    }
+
+    100% {
+        clip-path: circle(100% at 10% 100%);
+
+    }
+}
+
+@keyframes widgetsW {
+    0% {
+        clip-path: circle(1% at 100% 15%);
+    }
+
+    100% {
+        clip-path: circle(100% at 100% 5%);
+
+    }
+
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0) scale(1.1);
+    }
+
+    100% {
+        transform: translateY(1.4rem) scale(0.9);
+    }
+
+}
+@keyframes login {
+    0% {
+        transform: translateY(0);
+    }
+    
+    100% {
+        transform: translateY(3rem);
+    }
+
+}

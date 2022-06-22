@@ -1,0 +1,36 @@
+.keto_banner {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 0;
+  background: url("../../../public/images/ketobanner.jpg");
+  color: white;
+  .keto_banner_content {
+    width: 45%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    h2 {
+      font-size: 4rem;
+      font-weight: bolder;
+      text-align: center;
+    }
+    p {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+}
+
+@media(max-width:800px){
+  .keto_banner{
+    .keto_banner_content{
+      width: 95%;
+    }
+  }
+}

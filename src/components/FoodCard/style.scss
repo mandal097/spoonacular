@@ -1,0 +1,249 @@
+.carb_recipes_recipes_wrapper_cards {
+  width: 550px;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-top: 4rem;
+  background-color: #ffff;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1), 0px 10px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  &:hover {
+    .carb_recipes_recipes_wrapper_cards_top {
+      .img_div {
+        img {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  .carb_recipes_recipes_wrapper_cards_top {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    .img_div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1.05);
+        transition: all 200ms linear;
+      }
+    }
+  }
+  .carb_recipes_recipes_wrapper_cards_recipe_names {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0 1.2rem;
+    h4 {
+      font-size: 2.5rem;
+      text-transform: capitalize;
+    }
+    .carb_recipes_recipes_wrapper_cards_ratings {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 2rem;
+        color: darkgreen;
+        font-weight: 400;
+        margin-left: 1rem;
+      }
+      .stars {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        background-image: url("../../../public/images/fullstar.svg");
+        background-size: 3rem;
+        background-position: 50%;
+      }
+      .halfstar {
+        background-image: url("../../../public/images/star.svg");
+        background-size: 7rem;
+      }
+    }
+  }
+  .carb_recipes_recipes_wrapper_cards_details {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    .carb_recipes_recipes_wrapper_cards_details_left {
+      width: 50%;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      .time {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        span {
+          font-size: 1.6rem;
+          color: grey;
+          font-weight: bold;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 2.3rem;
+          height: 2.3rem;
+          background-image: url("../../../public//images/clock.svg");
+          background-repeat: no-repeat;
+          left: 1rem;
+        }
+      }
+      .calories {
+        width: 49%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        span {
+          font-size: 1.6rem;
+          color: grey;
+          font-weight: bold;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 2.3rem;
+          height: 2.3rem;
+          background-image: url("../../../public//images/calories.svg");
+          background-repeat: no-repeat;
+          left: 2rem;
+        }
+      }
+    }
+    .carb_recipes_recipes_wrapper_cards_details_right {
+      width: 43%;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .amounts {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 1rem;
+        position: relative;
+        cursor: pointer;
+        span {
+          font-size: 1.8rem;
+          font-weight: bolder;
+          color: grey;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            left: -1.8rem;
+            top: 30%;
+          }
+        }
+        .amounts_hover {
+          width: 10rem;
+          height: 2.1rem;
+          position: absolute;
+          top: -1rem;
+          left: -3rem;
+          font-size: 1.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-weight: bolder;
+          border-radius: 0.4rem;
+          &::before {
+            content: "";
+            position: absolute;
+            height: 2rem;
+            width: 1rem;
+            background-color: red;
+            bottom: -2rem;
+            left: 3rem;
+            clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
+          }
+        }
+        .carbs_hover {
+          background-color: red;
+          display: none;
+          &::before {
+            background-color: red;
+          }
+        }
+        .protein_hover {
+          background-color: blue;
+          display: none;
+          &::before {
+            background-color: blue;
+          }
+        }
+        .fat_hover {
+          background-color: goldenrod;
+          display: none;
+          &::before {
+            background-color: goldenrod;
+          }
+        }
+      }
+      .carbs {
+        span {
+          &::before {
+            background-color: red;
+          }
+        }
+        &:hover {
+          .carbs_hover {
+            display: flex;
+          }
+        }
+      }
+      .protein {
+        span {
+          &::before {
+            background-color: blue;
+          }
+        }
+        &:hover {
+          .protein_hover {
+            display: flex;
+          }
+        }
+      }
+      .fat {
+        span {
+          &::before {
+            background-color: goldenrod;
+          }
+        }
+        &:hover {
+          .fat_hover {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

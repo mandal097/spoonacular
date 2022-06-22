@@ -1,0 +1,38 @@
+.support_services {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0 7rem 0;
+  position: relative;
+  h2 {
+    font-size: 5rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 2rem;
+  }
+  .support_services_ {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .to_top{
+      position: fixed;
+      top:91%;
+      right: 5rem;
+      width: 4rem;
+      height:4rem;
+      border-radius: 50%;
+      background-color: var(--dark-greenish-col);
+      background-image: url('../../../public/images/arrowup.svg');
+      background-repeat: no-repeat;
+      background-size: 1.6rem;
+      background-position: 50%;
+      cursor: pointer;
+      transition: all 300ms linear;
+      &:hover{
+          margin-top: -0.3rem;
+      }
+  }
+}

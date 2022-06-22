@@ -1,0 +1,16 @@
+.Articles_More_Landing_Page {
+  width: 100%;
+  height: 110vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+  display: grid;
+  place-items: center;
+  .text_wrapper {
+      width: 85%;
+    h2 {
+      font-size: 7rem;
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+    }
+  }
+}

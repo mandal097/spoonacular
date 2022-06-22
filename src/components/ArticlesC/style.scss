@@ -1,0 +1,18 @@
+.articles_c {
+  width: 100%;
+  height: auto;
+  .articles_c_wrapper {
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width:1100px) {
+  .articles_c{
+    .articles_c_wrapper{
+      width: 95%;
+    }
+  }
+}

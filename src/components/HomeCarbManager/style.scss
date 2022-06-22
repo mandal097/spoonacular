@@ -1,0 +1,151 @@
+.home_carb_manager {
+  width: 100%;
+  height: auto;
+  .greenlief {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    .img {
+      width: 25%;
+      height: 80%;
+      background-image: url("../../../public//images//greenlief.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateX(-10rem);
+    }
+  }
+  .home_carb_manager_wrapper {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    h2 {
+      font-size: 4.5rem;
+      text-align: center;
+      color: #333;
+    }
+    h4 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 400;
+      span {
+        color: var(--greenish-col);
+        font-weight: bolder;
+      }
+    }
+    .main_container {
+      width: 85%;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .common_main_container {
+        .cards {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0.5rem;
+          transition: all 300ms linear;
+          &:hover{
+            transform: translateY(-0.5rem);
+            box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.1);
+          }
+          .cards_top {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            margin-bottom: 3rem;
+            overflow: hidden;
+          }
+          .cards_head {
+            font-size: 2.4rem;
+            font-weight: bolder;
+            color: black;
+          }
+          p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.8);
+          }
+        }
+      }
+      .main_container_left {
+        width: 28%;
+      }
+      .main_container_middle {
+        width: 33%;
+        display: grid;
+        place-items: center;
+        .img {
+          height: 90vh;
+          width: 88%;
+          border-radius: 4rem;
+          box-shadow: 1px 1px 20px rgba(128, 128, 128, 0.781);
+          object-fit: cover;
+          background: url("../../../public/images/mobile.svg") 50% no-repeat;
+          background-size: cover;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0rem;
+            bottom: 0rem;
+            left: 0;
+            right: 0;
+            background: url("../../../public/images/mobileCarb.png") center
+              no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+      .main_container_right {
+        width: 28%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .home_carb_manager {
+    .home_carb_manager_wrapper {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .home_carb_manager {
+      margin-top: 10rem;
+      .greenlief{
+          display: none;
+      }
+    .home_carb_manager_wrapper {
+      width: 95%;
+      .main_container {
+        flex-direction: column;
+        .common_main_container {
+          width: 100%;
+          .cards {
+            align-items: center;
+            margin: 1rem 0;
+          }
+        }
+        .main_container_left {
+          order: 2;
+        }
+        .main_container_middle {
+          order: -1;
+          margin-bottom: 3rem;
+        }
+        .right {
+          order: 2;
+        }
+      }
+    }
+  }
+}

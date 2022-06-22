@@ -1,0 +1,107 @@
+.articles_section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5rem 0;
+  h2 {
+    font-size: 5rem;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .articles_section_ {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
+    margin: 1rem 0;
+    .articles_section_stretched {
+      width: 48%;
+      height: 100%;
+      border-radius: 2rem;
+    }
+    .articles_section_smaller {
+      width: 24%;
+      height: 100%;
+      border-radius: 2rem;
+      .bottom {
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .common_class {
+      display: flex;
+      align-items: flex-end;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      position: relative;
+      background-position: center;
+      transform: scale(1);
+      transition: all 100ms linear;
+      cursor: pointer;
+      &:hover{
+          transform: scale(0.98);
+      }
+      .bottom {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h3 {
+          font-size: 2.4rem;
+          color: white;
+          text-transform: capitalize;
+          line-height: 2.6rem;
+        }
+        .article_writer {
+          width: 100%;
+          height: 7rem;
+          display: flex;
+          align-items: center;
+          padding: 0 2rem;
+          .article_writer_img {
+            width: 5rem;
+            height: 5rem;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+          .article_writer_desc {
+            width: 70%;
+            span {
+              font-size: 1.6rem;
+              color: white;
+              font-weight: 400;
+              text-transform: capitalize;
+              font-weight: bold;
+              margin-left: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:900px) {
+  .articles_section{
+    width: 90%;
+    margin: 0 auto;
+    .articles_section_{
+      flex-direction: column;
+      height: auto;
+      .common_class{
+        height: 60vh;
+        width: 100%;
+        margin-top: 3rem;
+      }
+    }
+  }
+}
