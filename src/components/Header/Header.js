@@ -4,20 +4,69 @@ import './header.scss'
 import { useNavigate } from 'react-router-dom'
 
 const HeaderView = ({ toggle, scrolled }) => {
+    const navigate = useNavigate()
     return (
         <div className={toggle ? "header_view" : ''}>
             <div className="header_view_wrapper">
                 <div className="header_view_middle">
-                    <span>Features</span>
-                    <span>Premium</span>
-                    <span>Recipes</span>
-                    <span>Articles</span>
-                    <span>Cookbook</span>
-                    <span>Support</span>
+                    <span onClick={() => {
+                        navigate('/features');
+                        window.scroll({
+                            top: 0,
+                            behavior: 'auto'
+                        })
+                    }}>Features</span>
+                    <span onClick={() => {
+                        navigate('/*');
+                        window.scroll({
+                            top: 0,
+                            behavior: 'auto'
+                        })
+                    }}>Premium</span>
+                    <span onClick={() => {
+                        navigate('/allrecipe');
+                        window.scroll({
+                            top: 0,
+                            behavior: 'auto'
+                        })
+                    }}>Recipes</span>
+                    <span onClick={() => {
+                        navigate('/articles');
+                        window.scroll({
+                            top: 0,
+                            behavior: 'smooth'
+                        })
+                    }}>Articles</span>
+                    <span onClick={() => {
+                        navigate('/*');
+                        window.scroll({
+                            top: 0,
+                            behavior: 'auto'
+                        })
+                    }}>Cookbook</span>
+                    <span onClick={() => {
+                        navigate('/help');
+                        window.scroll({
+                            top: 0,
+                            behavior: 'auto'
+                        })
+                    }}>Support</span>
                 </div>
                 <div className="header_view_bottom">
-                    <span>Log In</span>
-                    <Button txt='Join For free' width='50%' scrolled={scrolled} />
+                    <span onClick={() => {
+                        navigate('/account/signin');
+                        window.scroll({
+                            top: 0,
+                            behavior: 'auto'
+                        })
+                    }}>Log In</span>
+                    <Button onClick={() => {
+                        navigate('/*');
+                        window.scroll({
+                            top: 0,
+                            behavior: 'auto'
+                        })
+                    }} txt='Join For free' width='50%' scrolled={scrolled} />
                 </div>
             </div>
         </div>
